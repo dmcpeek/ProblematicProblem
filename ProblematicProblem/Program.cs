@@ -10,7 +10,7 @@ namespace ProblematicProblem
         {   
             var rng = new Random();
             bool cont;
-            List<string> activities = new List<string>() { "Wine Tasting", "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing" };
+            List<string> activities = new List<string>() { "Wine Tasting", "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Face Palming", "Football Zorbing" };
 
             Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
 
@@ -34,10 +34,10 @@ namespace ProblematicProblem
             //bool seeList = bool.TryParse(Console.ReadLine());
 
             bool seeList = Console.ReadLine().ToLower() == "sure" ? true : false;
-            if (seeList == false) 
-            {
-                return;
-            }
+            //if (seeList == false) - Only care if sure is entered.
+            //{
+            //    return;
+            //}
             if (seeList)
             {
                 foreach (string activity in activities)
@@ -51,10 +51,10 @@ namespace ProblematicProblem
                 Console.WriteLine();
                 Console.Write("Would you like to add any activities before we generate one? yes/no: ");
                 bool addToList = Console.ReadLine().ToLower() == "yes" ? true : false;
-                if (addToList == false)
-                {
-                    return;
-                }
+                //if (addToList == false) - Only care if yes is entered.
+                //{
+                //    return;
+                //}
                 Console.WriteLine();
                 while (addToList)
                 {
